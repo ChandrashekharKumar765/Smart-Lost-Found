@@ -608,33 +608,22 @@ div[data-baseweb="textarea"]:focus-within{
 input,textarea{color:#172033!important;background:#fff!important;-webkit-text-fill-color:#172033!important}
 label{color:#334155!important;font-weight:650!important}
 
-/* Date input - force a consistent light appearance on local and deployed builds */
-div[data-testid="stDateInput"]{
- background:#fff!important;
-}
-div[data-testid="stDateInput"] div[data-baseweb="input"]{
- background:#fff!important;
+/* Date input box - Cloud-safe light styling */
+div[data-testid="stDateInput"] [data-baseweb="input"]{
+ background-color:#ffffff!important;
  border:1px solid #cbd5e1!important;
  border-radius:8px!important;
  box-shadow:none!important;
 }
-div[data-testid="stDateInput"] div[data-baseweb="input"] > div{
- background:#fff!important;
+
+div[data-testid="stDateInput"] [data-baseweb="input"] > div{
+ background-color:#ffffff!important;
 }
+
 div[data-testid="stDateInput"] input{
- background:#fff!important;
+ background-color:#ffffff!important;
  color:#172033!important;
  -webkit-text-fill-color:#172033!important;
- color-scheme:light!important;
-}
-div[data-testid="stDateInput"] button{
- background:#fff!important;
- color:#172033!important;
- color-scheme:light!important;
-}
-div[data-testid="stDateInput"] button svg{
- color:#172033!important;
- fill:#172033!important;
 }
 
 /* Select popup */
