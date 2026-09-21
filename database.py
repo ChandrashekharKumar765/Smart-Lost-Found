@@ -7,7 +7,16 @@ DATABASE_NAME = "lost_found.db"
 
 
 # =========================================================
-# LOAD PRIVATE SETTINGS FROM .env
+# LOAD PRIVATE SETTINGS
+# =========================================================
+# Local development:
+#     Reads ADMIN_EMAIL / ADMIN_PASSWORD from .env
+#
+# Streamlit Cloud:
+#     Reads ADMIN_EMAIL / ADMIN_PASSWORD from Streamlit Secrets
+#
+# This keeps credentials out of the source code and allows the
+# same project to work both locally and after deployment.
 # =========================================================
 
 def load_env_file():
@@ -71,12 +80,64 @@ load_env_file()
 # PRIVATE ADMIN SETTINGS
 # =========================================================
 
-ADMIN_EMAIL = os.getenv(
+def get_private_setting(
+    key,
+    default=""
+):
+    """
+    Get a private setting.
+
+    Priority:
+    1. Streamlit Cloud Secrets
+    2. Local environment / .env
+    3. Default value
+    """
+
+    # -----------------------------------------------------
+    # 1. Streamlit Cloud Secrets
+    # -----------------------------------------------------
+
+    try:
+
+        import streamlit as st
+
+        value = st.secrets.get(
+            key,
+            None
+        )
+
+        if value is not None:
+
+            value = str(value).strip()
+
+            if value:
+                return value
+
+    except Exception:
+
+        pass
+
+    # -----------------------------------------------------
+    # 2. Local environment / .env
+    # -----------------------------------------------------
+
+    value = os.getenv(
+        key,
+        default
+    )
+
+    if value is None:
+        return default
+
+    return str(value).strip()
+
+
+ADMIN_EMAIL = get_private_setting(
     "ADMIN_EMAIL",
     "admin@lostfound.com"
 )
 
-ADMIN_PASSWORD = os.getenv(
+ADMIN_PASSWORD = get_private_setting(
     "ADMIN_PASSWORD",
     "admin123"
 )
