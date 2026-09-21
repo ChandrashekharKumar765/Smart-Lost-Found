@@ -608,22 +608,46 @@ div[data-baseweb="textarea"]:focus-within{
 input,textarea{color:#172033!important;background:#fff!important;-webkit-text-fill-color:#172033!important}
 label{color:#334155!important;font-weight:650!important}
 
-/* Date input box - Cloud-safe light styling */
-div[data-testid="stDateInput"] [data-baseweb="input"]{
- background-color:#ffffff!important;
+/* Date input - force ONLY the closed input box to light mode.
+   The calendar popup is intentionally left unchanged. */
+div[data-testid="stDateInput"]{
+ background:#fff!important;
+}
+
+div[data-testid="stDateInput"] [data-baseweb="input"],
+div[data-testid="stDateInput"] [data-baseweb="base-input"]{
+ background:#fff!important;
+ background-color:#fff!important;
  border:1px solid #cbd5e1!important;
  border-radius:8px!important;
  box-shadow:none!important;
+ color:#172033!important;
 }
 
-div[data-testid="stDateInput"] [data-baseweb="input"] > div{
- background-color:#ffffff!important;
+div[data-testid="stDateInput"] [data-baseweb="input"] > div,
+div[data-testid="stDateInput"] [data-baseweb="base-input"] > div{
+ background:#fff!important;
+ background-color:#fff!important;
+}
+
+div[data-testid="stDateInput"] [data-baseweb="input"] > div > div,
+div[data-testid="stDateInput"] [data-baseweb="base-input"] > div > div{
+ background:#fff!important;
+ background-color:#fff!important;
 }
 
 div[data-testid="stDateInput"] input{
- background-color:#ffffff!important;
+ background:#fff!important;
+ background-color:#fff!important;
  color:#172033!important;
  -webkit-text-fill-color:#172033!important;
+ color-scheme:light!important;
+}
+
+div[data-testid="stDateInput"] button{
+ background:#fff!important;
+ background-color:#fff!important;
+ color:#172033!important;
 }
 
 /* Select popup */
