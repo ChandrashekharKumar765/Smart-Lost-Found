@@ -608,6 +608,35 @@ div[data-baseweb="textarea"]:focus-within{
 input,textarea{color:#172033!important;background:#fff!important;-webkit-text-fill-color:#172033!important}
 label{color:#334155!important;font-weight:650!important}
 
+/* Date input - force a consistent light appearance on local and deployed builds */
+div[data-testid="stDateInput"]{
+ background:#fff!important;
+}
+div[data-testid="stDateInput"] div[data-baseweb="input"]{
+ background:#fff!important;
+ border:1px solid #cbd5e1!important;
+ border-radius:8px!important;
+ box-shadow:none!important;
+}
+div[data-testid="stDateInput"] div[data-baseweb="input"] > div{
+ background:#fff!important;
+}
+div[data-testid="stDateInput"] input{
+ background:#fff!important;
+ color:#172033!important;
+ -webkit-text-fill-color:#172033!important;
+ color-scheme:light!important;
+}
+div[data-testid="stDateInput"] button{
+ background:#fff!important;
+ color:#172033!important;
+ color-scheme:light!important;
+}
+div[data-testid="stDateInput"] button svg{
+ color:#172033!important;
+ fill:#172033!important;
+}
+
 /* Select popup */
 div[data-baseweb="popover"],div[data-baseweb="menu"],ul[role="listbox"]{
  background:#fff!important;border:1px solid #dbe3ee!important;border-radius:9px!important;box-shadow:0 12px 30px rgba(15,23,42,.12)!important
