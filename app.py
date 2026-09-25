@@ -530,172 +530,6 @@ st.markdown("""
 [data-testid="stHeader"]{background:transparent!important}
 [data-testid="stToolbar"]{background:transparent!important}
 
-/* =========================================================
-   SIDEBAR TOGGLE BUTTON — HIGH CONTRAST
-   Fixes ONLY the native Streamlit sidebar toggle.
-   ========================================================= */
-
-/* Collapsed sidebar: top-left expand button */
-[data-testid="stSidebarCollapsedControl"],
-[data-testid="collapsedControl"] {
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: 999999 !important;
-}
-
-[data-testid="stSidebarCollapsedControl"] button,
-[data-testid="collapsedControl"] button,
-button[data-testid="stSidebarCollapsedControl"],
-button[data-testid="stSidebarToggle"] {
-    background: #2563EB !important;
-    background-color: #2563EB !important;
-    color: #FFFFFF !important;
-    border: 2px solid #1D4ED8 !important;
-    border-radius: 10px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.35) !important;
-}
-
-/* Make every possible icon representation white */
-[data-testid="stSidebarCollapsedControl"] svg,
-[data-testid="collapsedControl"] svg,
-[data-testid="stSidebarCollapsedControl"] path,
-[data-testid="collapsedControl"] path,
-[data-testid="stSidebarCollapsedControl"] span,
-[data-testid="collapsedControl"] span {
-    color: #FFFFFF !important;
-    fill: #FFFFFF !important;
-    stroke: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-    opacity: 1 !important;
-}
-
-/* Expanded sidebar: collapse button */
-[data-testid="stSidebarCollapseButton"] button,
-[data-testid="stSidebarCollapseButton"] [data-testid="baseButton-headerNoPadding"] {
-    background: #2563EB !important;
-    background-color: #2563EB !important;
-    color: #FFFFFF !important;
-    border: 2px solid #1D4ED8 !important;
-    border-radius: 10px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.35) !important;
-}
-
-[data-testid="stSidebarCollapseButton"] svg,
-[data-testid="stSidebarCollapseButton"] path,
-[data-testid="stSidebarCollapseButton"] span {
-    color: #FFFFFF !important;
-    fill: #FFFFFF !important;
-    stroke: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-    opacity: 1 !important;
-}
-
-
-/* FINAL HIGH-CONTRAST SIDEBAR TOGGLE OVERRIDE */
-[data-testid="collapsedControl"],
-[data-testid="stSidebarCollapsedControl"] {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: flex !important;
-    z-index: 2147483647 !important;
-}
-
-[data-testid="collapsedControl"] button,
-[data-testid="stSidebarCollapsedControl"] button,
-button[data-testid="collapsedControl"],
-button[data-testid="stSidebarCollapsedControl"],
-button[kind="headerNoPadding"] {
-    background: #2563EB !important;
-    background-color: #2563EB !important;
-    color: #FFFFFF !important;
-    border: 2px solid #1D4ED8 !important;
-    border-radius: 10px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    box-shadow: 0 3px 12px rgba(37, 99, 235, 0.45) !important;
-}
-
-[data-testid="collapsedControl"] button *,
-[data-testid="stSidebarCollapsedControl"] button *,
-button[kind="headerNoPadding"] * {
-    color: #FFFFFF !important;
-    opacity: 1 !important;
-}
-
-[data-testid="collapsedControl"] svg,
-[data-testid="collapsedControl"] svg *,
-[data-testid="stSidebarCollapsedControl"] svg,
-[data-testid="stSidebarCollapsedControl"] svg *,
-button[kind="headerNoPadding"] svg,
-button[kind="headerNoPadding"] svg * {
-    color: #FFFFFF !important;
-    fill: none !important;
-    stroke: #FFFFFF !important;
-    stroke-width: 2.5 !important;
-    opacity: 1 !important;
-}
-
-[data-testid="collapsedControl"] *,
-[data-testid="stSidebarCollapsedControl"] * {
-    opacity: 1 !important;
-}
-
-
-/* =========================================================
-   DATE INPUT — DEPLOYMENT-SAFE CLOSED FIELD
-   Only targets the visible date input field.
-   Calendar popup styling is intentionally untouched.
-   ========================================================= */
-
-div[data-testid="stDateInput"] {
-    color-scheme: light !important;
-}
-
-div[data-testid="stDateInput"] [data-baseweb="input"],
-div[data-testid="stDateInput"] [data-baseweb="base-input"] {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
-    color-scheme: light !important;
-}
-
-div[data-testid="stDateInput"] [data-baseweb="input"] > div,
-div[data-testid="stDateInput"] [data-baseweb="base-input"] > div,
-div[data-testid="stDateInput"] [data-baseweb="input"] > div > div,
-div[data-testid="stDateInput"] [data-baseweb="base-input"] > div > div {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    border-color: #cbd5e1 !important;
-    color-scheme: light !important;
-}
-
-div[data-testid="stDateInput"] input {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #172033 !important;
-    -webkit-text-fill-color: #172033 !important;
-    color-scheme: light !important;
-}
-
-div[data-testid="stDateInput"] button {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #172033 !important;
-    border: 0 !important;
-}
-
-div[data-testid="stDateInput"] button svg {
-    color: #172033 !important;
-    fill: #172033 !important;
-    stroke: #172033 !important;
-}
-
 /* Sidebar */
 section[data-testid="stSidebar"]{
  background:linear-gradient(180deg,var(--sidebar) 0%,#0f172a 100%)!important;
@@ -722,6 +556,13 @@ section[data-testid="stSidebar"] div[role="radiogroup"]>label:has(input:checked)
 }
 section[data-testid="stSidebar"] div[role="radiogroup"]>label p,
 section[data-testid="stSidebar"] div[role="radiogroup"]>label span{color:inherit!important}
+
+/* Keep sidebar navigation text clearly visible on the dark sidebar. */
+section[data-testid="stSidebar"] div[role="radiogroup"]>label,
+section[data-testid="stSidebar"] div[role="radiogroup"]>label * {
+ color:#f8fafc !important;
+ opacity:1 !important;
+}
 section[data-testid="stSidebar"] div[role="radiogroup"]>label>div:first-child{display:none!important}
 
 /* Typography */
@@ -774,6 +615,43 @@ div[data-baseweb="textarea"]:focus-within{
 input,textarea{color:#172033!important;background:#fff!important;-webkit-text-fill-color:#172033!important}
 label{color:#334155!important;font-weight:650!important}
 
+/* Date input - force ONLY the closed input box to light mode.
+   The calendar popup is intentionally left unchanged. */
+div[data-testid="stDateInput"]{
+ background:#fff!important;
+}
+div[data-testid="stDateInput"] [data-baseweb="input"],
+div[data-testid="stDateInput"] [data-baseweb="base-input"]{
+ background:#fff!important;
+ background-color:#fff!important;
+ border:1px solid #cbd5e1!important;
+ border-radius:8px!important;
+ box-shadow:none!important;
+ color:#172033!important;
+}
+div[data-testid="stDateInput"] [data-baseweb="input"] > div,
+div[data-testid="stDateInput"] [data-baseweb="base-input"] > div{
+ background:#fff!important;
+ background-color:#fff!important;
+}
+div[data-testid="stDateInput"] [data-baseweb="input"] > div > div,
+div[data-testid="stDateInput"] [data-baseweb="base-input"] > div > div{
+ background:#fff!important;
+ background-color:#fff!important;
+}
+div[data-testid="stDateInput"] input{
+ background:#fff!important;
+ background-color:#fff!important;
+ color:#172033!important;
+ -webkit-text-fill-color:#172033!important;
+ color-scheme:light!important;
+}
+div[data-testid="stDateInput"] button{
+ background:#fff!important;
+ background-color:#fff!important;
+ color:#172033!important;
+}
+
 /* Select popup */
 div[data-baseweb="popover"],div[data-baseweb="menu"],ul[role="listbox"]{
  background:#fff!important;border:1px solid #dbe3ee!important;border-radius:9px!important;box-shadow:0 12px 30px rgba(15,23,42,.12)!important
@@ -810,6 +688,109 @@ hr{border-color:#e8edf4!important}
 div[data-testid="stAlert"]{border-radius:9px!important;border-width:1px!important}
 
 .lf-footer{text-align:center;color:#94a3b8!important;font-size:.74rem;padding:28px 0 4px}
+
+/* =========================================================
+   MOBILE SIDEBAR TOGGLE
+   IMPORTANT: target ONLY Streamlit's sidebar controls.
+   Do NOT style generic header buttons, because those are
+   Streamlit's own developer/menu controls.
+   ========================================================= */
+@media (max-width: 768px) {
+    [data-testid="stSidebarCollapseButton"],
+    [data-testid="stSidebarCollapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        position: fixed !important;
+        left: 8px !important;
+        top: 8px !important;
+        z-index: 999999 !important;
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        min-height: 46px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #2563eb !important;
+        background-color: #2563eb !important;
+        border: 2px solid #1d4ed8 !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, .28) !important;
+        color: #ffffff !important;
+        fill: #ffffff !important;
+        filter: none !important;
+        mix-blend-mode: normal !important;
+    }
+
+    [data-testid="stSidebarCollapseButton"] *,
+    [data-testid="stSidebarCollapsedControl"] * {
+        color: #ffffff !important;
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
+    [data-testid="stSidebarCollapseButton"] button,
+    [data-testid="stSidebarCollapsedControl"] button {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        min-height: 46px !important;
+        background: #2563eb !important;
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    [data-testid="stSidebarCollapseButton"] svg,
+    [data-testid="stSidebarCollapsedControl"] svg {
+        width: 24px !important;
+        height: 24px !important;
+        color: #ffffff !important;
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
+        opacity: 1 !important;
+    }
+}
+
+/* =========================================================
+   DATE INPUT — CLOSED FIELD ONLY
+   The calendar popup is intentionally untouched.
+   ========================================================= */
+div[data-testid="stDateInput"] {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+div[data-testid="stDateInput"] [data-baseweb="input"],
+div[data-testid="stDateInput"] [data-baseweb="base-input"],
+div[data-testid="stDateInput"] [data-baseweb="input"] > div,
+div[data-testid="stDateInput"] [data-baseweb="base-input"] > div,
+div[data-testid="stDateInput"] [data-baseweb="input"] > div > div,
+div[data-testid="stDateInput"] [data-baseweb="base-input"] > div > div {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+}
+
+div[data-testid="stDateInput"] input {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #172033 !important;
+    -webkit-text-fill-color: #172033 !important;
+    color-scheme: light !important;
+}
+
+div[data-testid="stDateInput"] button {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #172033 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
